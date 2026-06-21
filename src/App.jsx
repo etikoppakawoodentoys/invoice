@@ -6,7 +6,7 @@ import InvoicePreview from './components/InvoicePreview'
 const DEFAULT_ITEMS = [
   { id: 1, description: 'Balaji Keychains', quantity: 15, price: 35 },
   { id: 2, description: 'Wooden Doll Keychains', quantity: 12, price: 30 },
-  { id: 3, description: 'Mini Friends Key Chain Pack', quantity: 1, price: 0 },
+  { id: 3, description: 'Mini Friends Key Chain Pack', quantity: 12, price: 30 },
 ];
 
 const DEFAULT_STATE = {

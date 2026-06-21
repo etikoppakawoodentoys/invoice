@@ -6,9 +6,9 @@ function InvoiceForm({
   invoiceNo, setInvoiceNo,
   items, updateItem, removeItem, addItem,
   subtotal,
-  cgst,           // 👈 new
-  sgst,           // 👈 new
-  totalWithTax,   // 👈 new
+  cgst,           // new
+  sgst,           // new
+  totalWithTax,   // new
   paymentInfo, setPaymentInfo,
   footerNote, setFooterNote,
   contact, setContact,
@@ -166,7 +166,7 @@ function InvoiceForm({
         <button className="add-item-btn" onClick={addItem}>+ Add item</button>
       </div>
 
-      {/* TOTALS – now with CGST & SGST */}
+      {/* ✅ UPDATED TOTALS – now includes CGST & SGST */}
       <div className="totals-form">
         <div className="total-line-form">
           <span>Subtotal</span>
