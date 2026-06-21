@@ -14,7 +14,7 @@ const DEFAULT_STATE = {
   date: '15 June, 2026',
   invoiceNo: 'ORD-20260615-0002',
   items: DEFAULT_ITEMS,
-  paymentInfo: `- Union Bank\n- Account Name: AKINA PAVANKALYAN\n- Account No: 191612010003116`,
+  paymentInfo: `- Union Bank of India\n- Account Name: AKINA PAVANKALYAN\n- Account No: 191612010003116`,
   footerNote: 'ALL THE ABOVE TOYS ARE MADE UP OF ANKUDU WOOD (Ivory Wood)',
   contact: '+91 9154884214\nEtikoppaka, 531082, AP, India\nwww.etikoppakatoys.store',
 };
