@@ -6,7 +6,7 @@ import InvoicePreview from './components/InvoicePreview'
 const DEFAULT_ITEMS = [
   { id: 1, description: 'Balaji Keychains', quantity: 15, price: 35 },
   { id: 2, description: 'Wooden Doll Keychains', quantity: 12, price: 30 },
-  { id: 3, description: 'Mini Friends Key Chain Pack', quantity: 12, price: 30 },
+  { id: 3, description: 'Mini Friends Key Chain Pack', quantity: 1, price: 0 },
 ];
 
 const DEFAULT_STATE = {
@@ -14,7 +14,7 @@ const DEFAULT_STATE = {
   date: '15 June, 2026',
   invoiceNo: 'ORD-20260615-0002',
   items: DEFAULT_ITEMS,
-  paymentInfo: `- Union Bank of India\n- Account Name: AKINA PAVANKALYAN\n- Account No: 191612010003116`,
+  paymentInfo: `- Union Bank\n- Account Name: AKINA PAVANKALYAN\n- Account No: 191612010003116`,
   footerNote: 'ALL THE ABOVE TOYS ARE MADE UP OF ANKUDU WOOD (Ivory Wood)',
   contact: '+91 9154884214\nEtikoppaka, 531082, AP, India\nwww.etikoppakatoys.store',
 };
@@ -101,6 +101,9 @@ function App() {
           removeItem={removeItem}
           addItem={addItem}
           subtotal={subtotal}
+          cgst={cgst}                // 👈 pass CGST
+          sgst={sgst}                // 👈 pass SGST
+          totalWithTax={totalWithTax} // 👈 pass total with tax
           paymentInfo={paymentInfo}
           setPaymentInfo={setPaymentInfo}
           footerNote={footerNote}

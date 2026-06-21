@@ -6,6 +6,9 @@ function InvoiceForm({
   invoiceNo, setInvoiceNo,
   items, updateItem, removeItem, addItem,
   subtotal,
+  cgst,           // 👈 new
+  sgst,           // 👈 new
+  totalWithTax,   // 👈 new
   paymentInfo, setPaymentInfo,
   footerNote, setFooterNote,
   contact, setContact,
@@ -163,14 +166,23 @@ function InvoiceForm({
         <button className="add-item-btn" onClick={addItem}>+ Add item</button>
       </div>
 
+      {/* TOTALS – now with CGST & SGST */}
       <div className="totals-form">
         <div className="total-line-form">
           <span>Subtotal</span>
           <span className="amount">₹ {subtotal.toLocaleString('en-IN')}</span>
         </div>
+        <div className="total-line-form">
+          <span>CGST (2.5%)</span>
+          <span className="amount">₹ {cgst.toLocaleString('en-IN')}</span>
+        </div>
+        <div className="total-line-form">
+          <span>SGST (2.5%)</span>
+          <span className="amount">₹ {sgst.toLocaleString('en-IN')}</span>
+        </div>
         <div className="total-line-form total-final">
           <span>Grand Total</span>
-          <span className="amount">₹ {subtotal.toLocaleString('en-IN')}</span>
+          <span className="amount">₹ {totalWithTax.toLocaleString('en-IN')}</span>
         </div>
       </div>
 
